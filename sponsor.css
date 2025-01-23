@@ -1,0 +1,193 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #FFEB3B, #FF9800, #FF5722); /* Gradient me ngjyra të ngrohta */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container */
+.container-AK {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header-AK {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Video Section */
+.video-section-AK {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.video-section-AK h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.video-wrapper-AK {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Section */
+.table-section-AK {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.table-section-AK h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    color: #555;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Footer */
+.footer-AK {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .video-section-AK h2 {
+        font-size: 1.6rem;
+    }
+
+    .table-section-AK h2 {
+        font-size: 1.6rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .video-section-AK h2 {
+        font-size: 1.5rem;
+    }
+
+    .table-section-AK h2 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .video-section-AK h2 {
+        font-size: 1.3rem;
+    }
+
+    .table-section-AK h2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    th, td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .footer-AK {
+        font-size: 0.8rem;
+    }
+}

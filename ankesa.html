@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuti Ankesash</title>
+    <link rel="stylesheet" href="ankesa.css">
+</head>
+<header>
+    <h1>Kuti Ankesash</h1>
+    <p>Na tregoni përvojën tuaj me produktet tona</p>
+</header>
+
+<body>
+    <div class="form-container-AK">
+        <form id="complaintForm">
+            <div class="input-group-AK">
+                <label for="name">Emri juaj:</label>
+                <input type="text" id="name" name="name" placeholder="Emri juaj" required>
+            </div>
+
+            <div class="input-group-AK">
+                <label for="product">Produkti i ankimuar:</label>
+                <input type="text" id="product" name="product" placeholder="Emri i produktit" required>
+            </div>
+
+            <div class="input-group-AK">
+                <label for="complaint">Përshkrimi i ankesës:</label>
+                <textarea id="complaint" name="complaint" placeholder="Përshkrimi i ankesës tuaj..." rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn-AK">Dërgo Ankesen</button>
+        </form>
+
+        <div id="thankYouMessage" class="thank-you-AK hidden-AK">
+            <p>Faleminderit! Ne e kemi marrë ankesën tuaj dhe do të trajtohet sa më shpejt të jetë e mundur.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025, Tini shopping all rights are reserved.</p>
+    </footer>
+
+    <script src="ankesa.js"></script>
+</body>
+</html>

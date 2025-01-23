@@ -1,0 +1,128 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Product Customizer</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero-section-AK">
+        <h1>Advanced Product Customizer</h1>
+        <p>Create a personalized product with enhanced options and effects.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container-AK">
+        <section class="customization-section-AK">
+            <div class="customization-grid-AK">
+
+                <!-- Form Section -->
+                <div class="form-area-AK">
+                    <h2>Customize Your Product</h2>
+
+                    <!-- Product Selection -->
+                    <div class="form-group-AK">
+                        <label for="product-select">Select Product:</label>
+                        <select id="product-select">
+                            <option value="tshirt">T-shirt</option>
+                            <option value="mug">Mug</option>
+                            <option value="cap">Cap</option>
+                            <option value="hoodie">Hoodie</option>
+                        </select>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="form-group-AK">
+                        <label for="color-select">Text Color:</label>
+                        <input type="color" id="color-select">
+                    </div>
+
+                    <!-- Custom Text -->
+                    <div class="form-group-AK">
+                        <label for="custom-text">Custom Text:</label>
+                        <input type="text" id="custom-text" placeholder="Enter your text">
+                    </div>
+
+                    <!-- Font Selection -->
+                    <div class="form-group-AK">
+                        <label for="font-select">Font Style:</label>
+                        <select id="font-select">
+                            <option value="Arial">Arial</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Verdana">Verdana</option>
+                        </select>
+                    </div>
+
+                    <!-- Font Size -->
+                    <div class="form-group-AK">
+                        <label for="font-size">Font Size (px):</label>
+                        <input type="number" id="font-size" min="10" max="100" value="20">
+                    </div>
+
+                    <!-- Text Position X -->
+<div class="form-group-AK">
+    <label for="text-position-x">Text Position X:</label>
+    <input type="number" id="text-position-x" placeholder="X position (px)" value="50">
+</div>
+
+<!-- Text Position Y -->
+<div class="form-group-AK">
+    <label for="text-position-y">Text Position Y:</label>
+    <input type="number" id="text-position-y" placeholder="Y position (px)" value="50">
+</div>
+
+
+                    <!-- Text Effects -->
+                    <div class="form-group-AK">
+                        <label>Text Effects:</label>
+                        <div>
+                            <input type="checkbox" id="text-gradient"> Gradient
+                            <input type="checkbox" id="text-glow"> Glow
+                            <input type="checkbox" id="text-mirror"> Mirror
+                        </div>
+                    </div>
+
+                    <!-- Image Upload -->
+                    <div class="form-group-AK">
+                        <label for="upload-image">Upload Image:</label>
+                        <input type="file" id="upload-image" accept="image/*">
+                    </div>
+
+                    <!-- Buttons -->
+                    <button class="btn-primary-AK" id="apply-changes">Apply Changes</button>
+                    <button class="btn-primary-AK" id="download-design">Download Design</button>
+                </div>
+
+                <!-- Preview Section -->
+                <div class="preview-area-AK">
+                    <div class="product-display-AK">
+                        <!-- Hidden images for each product -->
+                        <img id="tshirt-image" src=".vscode/tshirt.png.jpg" alt="T-shirt Preview" class="hidden-product">
+                        <img id="mug-image" src=".vscode/mug.png.jpg" alt="Mug Preview" class="hidden-product">
+                        <img id="cap-image" src=".vscode/cap.png.jpg" alt="Cap Preview" class="hidden-product">
+                        <img id="hoodie-image" src=".vscode/hoddies.png.webp" alt="Hoodie Preview" class="hidden-product">
+
+                        <!-- Text Preview -->
+                        <p id="custom-text-preview">Your custom text will appear here.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal-AK" id="success-modal">
+        <div class="modal-content-AK">
+            <p>Design applied successfully!</p>
+            <button id="close-modal">OK</button>
+        </div>
+    </div>
+
+    <script src="design.js"></script>
+
+
+</body></html>

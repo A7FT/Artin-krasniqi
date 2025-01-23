@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f4f4f9, #d1c4e9); /* Background modern me gradient */
+  color: #333;
+}
+
+.header-AK, .footer-AK {
+  background-color: #6200ea;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-AK {
+  font-size: 14px;
+}
+
+/* Product List */
+#product-list-AK {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  gap: 20px;
+}
+
+.product-card-AK {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card-AK:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-AK img {
+  width: 100%;
+  height: 200px; /* Lartësi fikse për të gjitha imazhet */
+  object-fit: contain; /* Siguron që imazhi të përshtatet brenda kufijve të kutisë pa u prerë */
+  border-radius: 8px; /* Opsionale: për dizajn më të bukur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hijë për një pamje moderne */
+  background-color: #f5f5f5; /* Ngjyrë e sfondit për të mbushur hapësirën bosh */
+}
+
+.buy-btn-AK {
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.buy-btn-AK:hover {
+  background-color: #3700b3;
+}
+
+/* Product Details */
+#product-details-AK {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1000; /* Siguro që është mbi elementët e tjerë */
+}
+
+#product-details-AK.hidden-AK {
+  display: none;
+}
+
+#details-container-AK {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+#purchase-form-AK {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#purchase-form-AK label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+#purchase-form-AK input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#purchase-form-AK button {
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#purchase-form-AK button:hover {
+  background-color: #3700b3;
+}
+
+#back-btn-AK {
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Hapësirë ndërmjet butonave */
+  margin-bottom: 20px; /* Hapësirë ndërmjet butonit dhe footer-it */
+}
+
+/* Footer Styles for Product Page */
+#product-details-AK .footer-AK {
+  position: relative;
+  width: 100%;
+  padding: 20px 0; /* Hapësirë më e madhe për footer-in */
+  font-size: 14px;
+  background-color: #3700b3; /* Ngjyrë tjetër për footer-in e faqes së produktit */
+  color: #fff;
+  text-align: center;
+  margin-top: auto; /* Siguro që footer-i shfaqet gjithmonë në fund të ekranit */
+  width: 109%; /* Zgjat footer-in në të gjithë gjerësinë e ekranit */
+}
+
+/* Butonat në përgjithësi */
+#purchase-form-AK button, #back-btn-AK {
+  width: auto; /* Siguron që butonat të kenë një gjerësi të natyrshme në vend që të zgjerohen 100% */
+  max-width: 300px; /* Një gjerësi maksimale për të mos i bërë shumë të mëdhenj */
+  margin: 10px auto; /* Qendroni butonat në qendër dhe lërini një hapësirë mes tyre */
+}
+
+/* Përmasat për ekranet më të vogla */
+@media (max-width: 480px) {
+  body {
+    padding: 10px; /* Shtoni hapësirë nëpër faqe për ekranet e vogla */
+  }
+
+  .product-card-AK img {
+    height: 150px; /* Lartësi më e vogël për ekranet e vogla */
+  }
+
+  #purchase-form-AK button, #back-btn-AK {
+    width: auto; /* Ruani përmasat e natyrshme */
+    max-width: 200px; /* Përdorni gjerësi maksimale të përshtatshme për telefonat */
+  }
+
+  #purchase-form-AK input, #purchase-form-AK button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .product-card-AK {
+    width: 100%; /* Përshtatni për ekranet e vogla */
+    padding: 10px;
+  }
+
+  .header-AK, .footer-AK {
+    padding: 15px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  #product-list-AK {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .product-card-AK {
+    width: 45%;
+  }
+
+  #purchase-form-AK button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #back-btn-AK {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #product-list-AK {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card-AK {
+    width: 90%;
+  }
+
+  #purchase-form-AK {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #purchase-form-AK button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #back-btn-AK {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card-AK {
+    width: 100%;
+  }
+
+  #purchase-form-AK input,
+  #purchase-form-AK button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #back-btn-AK,
+  #purchase-form-AK button {
+    width: 100%;
+  }
+
+  .header-AK, .footer-AK {
+    padding: 15px 10px;
+  }
+}
