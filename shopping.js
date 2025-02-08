@@ -15,20 +15,18 @@ const products = [
 // Render Products
 function renderProducts(filter = "", search = "") {
   const productList = document.getElementById("product-list");
-  const productCards = productList.querySelectorAll(".product-card.AK");
+  const productCards = productList.querySelectorAll(".AK-product-card");
 
   productCards.forEach(card => {
     const productName = card.querySelector("h5").textContent.toLowerCase();
-    const productCategory = products.find(p => p.name.toLowerCase() === productName)?.category;
+    const product = products.find(p => p.name.toLowerCase() === productName);
 
-    const matchesCategory = !filter || filter === "all" || productCategory === filter;
+    if (!product) return; // Nëse produkti nuk ekziston, mos vazhdo
+
+    const matchesCategory = !filter || filter === "all" || product.category === filter;
     const matchesSearch = !search || productName.includes(search.toLowerCase());
 
-    if (matchesCategory && matchesSearch) {
-      card.parentElement.style.display = "block";
-    } else {
-      card.parentElement.style.display = "none";
-    }
+    card.style.display = matchesCategory && matchesSearch ? "block" : "none";
   });
 }
 
@@ -43,17 +41,18 @@ document.getElementById("search-bar").addEventListener("input", (event) => {
 
 // Add to Cart Event Listener
 document.getElementById("product-list").addEventListener("click", (event) => {
-  if (event.target.classList.contains("add-to-cart")) {
-    const productName = event.target.closest(".product-card.AK").querySelector("h5").innerText;
+  if (event.target.classList.contains("AK-add-to-cart")) {
+    const productName = event.target.closest(".AK-product-card").querySelector("h5").innerText;
     alert(`${productName} has been added to your cart.`);
   }
 });
 
 // Initial Render
-document .addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
 });
 
+// Contact Form Submission
 document.getElementById("contact-form").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevents page reload
   
@@ -91,5 +90,4 @@ document.getElementById("contact-form").addEventListener("submit", function(even
       console.error('There was an error:', error);
       alert('There was an error sending your message!');
   });
-}); 
-                    
+});
