@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - TiniShopping</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- Ikona e madhe e robotit në qendër -->
+    <div class="AK-robot-container" id="AK-robot-container">
+        <div class="AK-robot-icon">🤖</div>
+    </div>
+
+    <!-- Butoni për hapjen e chatbot-it -->
+    <div class="AK-chat-icon" id="AK-chat-icon">
+        💬
+    </div>
+
+    <!-- Chatbot-i -->
+    <div class="AK-chat-container" id="AK-chat-container">
+        <div class="AK-chat-header">
+            <span>🤖 TiniBot</span>
+            <button id="AK-close-chat">✖</button>
+        </div>
+        <div class="AK-chat-box" id="AK-chat-box">
+            <div class="AK-bot-message">
+                Përshëndetje! Unë jam TiniBot. Më pyet vetëm për produktet, faqen dhe transportin. 
+                Për tema të tjera nuk jam i autorizuar të përgjigjem.
+            </div>
+        </div>
+        <div class="AK-chat-input">
+            <input type="text" id="AK-user-input" placeholder="Shkruaj pyetjen këtu...">
+            <button id="AK-send-message">Dërgo</button>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+</body>
+</html>

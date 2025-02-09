@@ -32,8 +32,12 @@ body {
 }
 
 .AK-hidden-product {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all 0.3s ease;
 }
+
 
 .AK-product-display img.AK-active-product {
     display: block;
@@ -118,11 +122,12 @@ body {
 
 .AK-product-display img {
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* Ndrysho në një vlerë më të madhe si 600px */
     border-radius: 8px;
     object-fit: contain;
     margin: 0 auto;
 }
+
 
 .AK-product-display p {
     font-size: 1.5rem;
