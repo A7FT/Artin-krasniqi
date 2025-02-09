@@ -1,70 +1,70 @@
 /* General Styling */
-body.AK {
+.AK-body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
 }
 
-header.AK {
+.AK-header {
     box-shadow: 0px 4px 6px #0000001a;
 }
 
-.site-title.AK {
+.AK-site-title {
     font-size: 1.8rem;
     font-weight: bold;
 }
 
-.nav-link.AK {
+.AK-nav-link {
     margin-right: 15px;
     text-decoration: none;
     font-size: 1rem;
 }
 
 /* Shtoni hapësirë mes seksionit të filtrave dhe grid-it të produkteve */
-.products-section.AK .container .row {
+.AK-products-section .container .row {
     margin-top: 30px; /* Përshtatni këtë vlerë sipas nevojës */
 }
 
 /* Hero Section */
-.hero-section.AK {
+.AK-hero-section {
     background: linear-gradient(to right, #1e88e5, #64b5f6);
     color: white;
     padding: 100px 20px;
 }
 
-.hero-section.AK h2 {
+.AK-hero-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.hero-section.AK p {
+.AK-hero-section p {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
 
 /* About Section */
-.about-section.AK {
+.AK-about-section {
     text-align: center;
     line-height: 1.8;
 }
 
-.about-section.AK h2 {
+.AK-about-section h2 {
     font-size: 2rem;
     margin-bottom: 15px;
 }
 
-.about-section.AK p {
+.AK-about-section p {
     font-size: 1.1rem;
     color: #555;
 }
 
 /* Products Section */
-.products-section.AK h2 {
+.AK-products-section h2 {
     margin-bottom: 30px;
 }
 
-.product-card.AK {
+.AK-product-card {
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
@@ -73,7 +73,7 @@ header.AK {
     color: #333; /* Ngjyra fillestare e tekstit */
 }
 
-.product-card.AK:hover {
+.AK-product-card:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #333; /* Ngjyra dark mode */
@@ -81,8 +81,7 @@ header.AK {
     cursor: pointer;
 }
 
-.product-card.AK img 
-{
+.AK-product-card img {
     width: 100%;
     height: 200px; /* Lartësi fikse për të gjitha imazhet */
     object-fit: contain; /* Siguron që imazhi të përshtatet brenda kufijve të kutisë pa u prerë */
@@ -91,55 +90,55 @@ header.AK {
     background-color: #f5f5f5; /* Ngjyrë e sfondit për të mbushur hapësirën bosh */
 }
 
-.product-card-body.AK {
+.AK-product-card-body {
     padding: 15px;
     text-align: center;
 }
 
 /* Testimonials Section */
-.testimonials-section.AK {
+.AK-testimonials-section {
     background: #f1f1f1;
     text-align: center;
     padding: 40px 20px;
 }
 
-.testimonial.AK {
+.AK-testimonial {
     font-style: italic;
     font-size: 1.2rem;
     color: #333;
 }
 
 /* FAQ Section */
-.faq-section.AK .accordion-button {
+.AK-faq-section .accordion-button {
     background: #e3f2fd;
     color: #0d47a1;
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-.faq-section.AK .accordion-body {
+.AK-faq-section .accordion-body {
     background: #fff;
     font-size: 1rem;
 }
 
 /* Contact Section */
-.contact-section.AK form {
+.AK-contact-section form {
     max-width: 600px;
     margin: 0 auto;
 }
 
-.contact-section.AK .form-control {
+.AK-contact-section .form-control {
     margin-bottom: 15px;
 }
 
 /* Footer */
-footer.AK {
+.AK-footer {
     background: #333;
     color: white;
     padding: 10px 0;
 }
 
-footer.AK p {
+.AK-footer p {
     margin: 0;
     font-size: 0.9rem;
 }

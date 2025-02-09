@@ -1,36 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // A.K. - Script for handling product selection and order submission
-    const buyButtonsAK = document.querySelectorAll(".buy-btn-AK");
-    const productDetailsAK = document.getElementById("product-details-AK");
-    const mainContentAK = document.getElementById("main-content-AK");
-    const backBtnAK = document.getElementById("back-btn-AK");
-    const productImageAK = document.getElementById("product-image-AK");
-    const productTitleAK = document.getElementById("product-title-AK");
-  
-    buyButtonsAK.forEach(button => {
+    // AK - Script for handling product selection and order submission
+    const AK_buyButtons = document.querySelectorAll(".AK-buy-btn");
+    const AK_productDetails = document.getElementById("AK-product-details");
+    const AK_mainContent = document.getElementById("AK-main-content");
+    const AK_backBtn = document.getElementById("AK-back-btn");
+    const AK_productImage = document.getElementById("AK-product-image");
+    const AK_productTitle = document.getElementById("AK-product-title");
+
+    AK_buyButtons.forEach(button => {
         button.addEventListener("click", (event) => {
-            const product = event.target.closest(".product-card-AK");
-            const productImgSrc = product.querySelector("img").src;
-            const productTitleText = product.querySelector("h2").textContent;
-  
-            productImageAK.src = productImgSrc;
-            productTitleAK.textContent = productTitleText;
-  
-            mainContentAK.classList.add("hidden-AK");
-            productDetailsAK.classList.remove("hidden-AK");
+            const AK_product = event.target.closest(".AK-product-card");
+            const AK_productImgSrc = AK_product.querySelector("img").src;
+            const AK_productTitleText = AK_product.querySelector("h2").textContent;
+
+            AK_productImage.src = AK_productImgSrc;
+            AK_productTitle.textContent = AK_productTitleText;
+
+            AK_mainContent.classList.add("AK-hidden");
+            AK_productDetails.classList.remove("AK-hidden");
         });
     });
-  
-    backBtnAK.addEventListener("click", () => {
-        productDetailsAK.classList.add("hidden-AK");
-        mainContentAK.classList.remove("hidden-AK");
+
+    AK_backBtn.addEventListener("click", () => {
+        AK_productDetails.classList.add("AK-hidden");
+        AK_mainContent.classList.remove("AK-hidden");
     });
-  
-    const formAK = document.getElementById("purchase-form-AK");
-    formAK.addEventListener("submit", (event) => {
+
+    const AK_form = document.getElementById("AK-purchase-form");
+    AK_form.addEventListener("submit", (event) => {
         event.preventDefault();
         alert("Your order has been placed successfully!");
-        productDetailsAK.classList.add("hidden-AK");
-        mainContentAK.classList.remove("hidden-AK");
+        AK_productDetails.classList.add("AK-hidden");
+        AK_mainContent.classList.remove("AK-hidden");
     });
 });

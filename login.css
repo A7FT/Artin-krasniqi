@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url(https://user-images.githubusercontent.com/13468728/233847739-219cb494-c265-4554-820a-bd3424c59065.jpg);
+    background-image: url(https://i.imgur.com/5fQUPDl.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -37,14 +37,14 @@ h1 {
     text-align: center;
 }
 
-.inputbox-ak {
+.AK-inputbox {
     position: relative;
     margin: 30px 0;
     max-width: 310px;
     border-bottom: 2px solid #fff;
 }
 
-.inputbox-ak label {
+.AK-inputbox label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -60,7 +60,7 @@ input:valid ~ label {
     top: -5px;
 }
 
-.inputbox-ak input {
+.AK-inputbox input {
     width: 100%;
     height: 60px;
     background: transparent;
@@ -71,7 +71,7 @@ input:valid ~ label {
     color: #fff;
 }
 
-.inputbox-ak ion-icon {
+.AK-inputbox ion-icon {
     position: absolute;
     right: 8px;
     color: #fff;
@@ -79,7 +79,7 @@ input:valid ~ label {
     top: 20px;
 }
 
-.forget-ak {
+.AK-forget {
     margin: 35px 0;
     font-size: 0.85rem;
     color: #fff;
@@ -87,22 +87,22 @@ input:valid ~ label {
     justify-content: space-between;
 }
 
-.forget-ak label {
+.AK-forget label {
     display: flex;
     align-items: center;
 }
 
-.forget-ak label input {
+.AK-forget label input {
     margin-right: 3px;
 }
 
-.forget-ak a {
+.AK-forget a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
 
-.forget-ak a:hover {
+.AK-forget a:hover {
     text-decoration: underline;
 }
 
@@ -119,22 +119,16 @@ button {
     color: #fff;
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 
 button:hover {
     background: rgb(61, 106, 255);
     box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 
 button:hover::before {
-    -webkit-animation: sh02 0.5s 0s linear;
-    -moz-animation: sh02 0.5s 0s linear;
     animation: sh02 0.5s 0s linear;
 }
 
@@ -149,10 +143,6 @@ button::before {
     opacity: 0;
     background: #fff;
     box-shadow: 0 0 50px 30px #fff;
-    -webkit-transform: skewX(-20deg);
-    -moz-transform: skewX(-20deg);
-    -ms-transform: skewX(-20deg);
-    -o-transform: skewX(-20deg);
     transform: skewX(-20deg);
 }
 
@@ -161,11 +151,11 @@ button::before {
         opacity: 0;
         left: 0%;
     }
-  
+    
     50% {
         opacity: 1;
     }
-  
+    
     to {
         opacity: 0;
         left: 100%;
@@ -174,24 +164,22 @@ button::before {
 
 button:active {
     box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: box-shadow 0.2s ease-in;
-    -moz-transition: box-shadow 0.2s ease-in;
     transition: box-shadow 0.2s ease-in;
 }
 
-.register-ak {
+.AK-register {
     font-size: 0.9rem;
     color: #fff;
     text-align: center;
     margin: 25px 0 10px;
 }
 
-.register-ak p a {
+.AK-register p a {
     text-decoration: none;
     color: #fff;
     font-weight: 600;
 }
 
-.register-ak p a:hover {
+.AK-register p a:hover {
     text-decoration: underline;
 }

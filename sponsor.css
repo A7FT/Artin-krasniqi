@@ -18,14 +18,14 @@ body {
 }
 
 /* Container */
-.container-AK {
+.AK-container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 /* Header */
-.header-AK {
+.AK-header {
     background-color: #333;
     color: white;
     text-align: center;
@@ -38,19 +38,19 @@ h1 {
 }
 
 /* Video Section */
-.video-section-AK {
+.AK-video-section {
     padding: 50px 0;
     background-color: #fff;
     text-align: center;
 }
 
-.video-section-AK h2 {
+.AK-video-section h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-.video-wrapper-AK {
+.AK-video-wrapper {
     max-width: 100%;
     margin: 0 auto;
 }
@@ -63,12 +63,12 @@ video {
 }
 
 /* Table Section */
-.table-section-AK {
+.AK-table-section {
     padding: 50px 0;
     background-color: #fff;
 }
 
-.table-section-AK h2 {
+.AK-table-section h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #333;
@@ -102,7 +102,7 @@ tr:nth-child(even) {
 }
 
 /* Footer */
-.footer-AK {
+.AK-footer {
     background-color: #333;
     color: white;
     text-align: center;
@@ -116,11 +116,11 @@ tr:nth-child(even) {
         font-size: 2rem;
     }
 
-    .video-section-AK h2 {
+    .AK-video-section h2 {
         font-size: 1.6rem;
     }
 
-    .table-section-AK h2 {
+    .AK-table-section h2 {
         font-size: 1.6rem;
     }
 
@@ -138,11 +138,11 @@ tr:nth-child(even) {
         font-size: 1.8rem;
     }
 
-    .video-section-AK h2 {
+    .AK-video-section h2 {
         font-size: 1.5rem;
     }
 
-    .table-section-AK h2 {
+    .AK-table-section h2 {
         font-size: 1.5rem;
     }
 
@@ -165,11 +165,11 @@ tr:nth-child(even) {
         font-size: 1.5rem;
     }
 
-    .video-section-AK h2 {
+    .AK-video-section h2 {
         font-size: 1.3rem;
     }
 
-    .table-section-AK h2 {
+    .AK-table-section h2 {
         font-size: 1.3rem;
     }
 
@@ -187,7 +187,7 @@ tr:nth-child(even) {
         padding: 6px;
     }
 
-    .footer-AK {
+    .AK-footer {
         font-size: 0.8rem;
     }
 }

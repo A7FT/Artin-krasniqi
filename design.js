@@ -1,138 +1,103 @@
 document.addEventListener("DOMContentLoaded", () => {
     // DOM elements
-    const productSelectAK = document.getElementById("product-select");
-    const colorSelectAK = document.getElementById("color-select");
-    const customTextAK = document.getElementById("custom-text");
-    const fontSelectAK = document.getElementById("font-select");
-    const fontSizeAK = document.getElementById("font-size");
-    const textPositionXAK = document.getElementById("text-position-x");
-    const textPositionYAK = document.getElementById("text-position-y");
-    const textPreviewAK = document.getElementById("custom-text-preview");
-    const successModalAK = document.getElementById("success-modal");
-    const closeModalAK = document.getElementById("close-modal");
-    const textGradientAK = document.getElementById("text-gradient");
-    const textGlowAK = document.getElementById("text-glow");
-    const textMirrorAK = document.getElementById("text-mirror");
-    const uploadImageAK = document.getElementById("upload-image");
+    const productSelect = document.getElementById("AK-product-select");
+    const colorSelect = document.getElementById("AK-color-select");
+    const customTextInput = document.getElementById("AK-custom-text");
+    const fontSelect = document.getElementById("AK-font-select");
+    const fontSizeInput = document.getElementById("AK-font-size");
+    const textPositionXInput = document.getElementById("AK-text-position-x");
+    const textPositionYInput = document.getElementById("AK-text-position-y");
+    const textGradient = document.getElementById("AK-text-gradient");
+    const textGlow = document.getElementById("AK-text-glow");
+    const textMirror = document.getElementById("AK-text-mirror");
+    const uploadImage = document.getElementById("AK-upload-image");
 
-    // Function to apply text changes to preview
-    const applyTextChangesAK = () => {
-        textPreviewAK.textContent = customTextAK.value;
-        textPreviewAK.style.fontFamily = fontSelectAK.value;
-        textPreviewAK.style.fontSize = `${fontSizeAK.value}px`;
-        textPreviewAK.style.color = colorSelectAK.value;
-
-        // Gradient effect
-        if (textGradientAK.checked) {
-            textPreviewAK.style.backgroundImage = `linear-gradient(90deg, ${colorSelectAK.value}, #ff9a9e)`;
-            textPreviewAK.style.backgroundClip = "text";
-            textPreviewAK.style.color = "transparent";
-        } else {
-            textPreviewAK.style.backgroundImage = "none";
-        }
-
-        // Glow effect
-        if (textGlowAK.checked) {
-            textPreviewAK.style.textShadow = `0 0 10px ${colorSelectAK.value}, 0 0 20px ${colorSelectAK.value}`;
-        } else {
-            textPreviewAK.style.textShadow = "none";
-        }
-
-        // Mirror effect
-        if (textMirrorAK.checked) {
-            textPreviewAK.style.transform = "scaleX(-1)";  // Fixed mirror effect
-        } else {
-            textPreviewAK.style.transform = "none";
-        }
-
-        // Position text based on X and Y input
-        textPreviewAK.style.position = 'absolute';
-        textPreviewAK.style.left = `${textPositionXAK.value}px`;
-        textPreviewAK.style.top = `${textPositionYAK.value}px`;
+    const productImages = {
+        tshirt: document.getElementById("AK-tshirt-image"),
+        mug: document.getElementById("AK-mug-image"),
+        cap: document.getElementById("AK-cap-image"),
+        hoodie: document.getElementById("AK-hoodie-image")
     };
 
-    // Show modal after applying changes
-    const showModalAK = () => {
-        successModalAK.style.display = "flex";
-    };
+    const customTextPreview = document.getElementById("AK-custom-text-preview");
+    const successModal = document.getElementById("AK-success-modal");
+    const closeModalBtn = document.getElementById("AK-close-modal");
+    const applyChangesBtn = document.getElementById("AK-apply-changes");
 
-    // Close modal
-    const closeModalHandlerAK = () => {
-        successModalAK.style.display = "none";
-    };
-
-    // Handle product selection change
-    productSelectAK.addEventListener("change", () => {
-        const selectedProduct = productSelectAK.value;
-
-        // Clear current image source
-        document.querySelectorAll(".hidden-product").forEach((img) => {
-            img.classList.remove("active-product");
+    // Function to update product preview based on selected product
+    const updateProductPreview = () => {
+        const selectedProduct = productSelect.value;
+        Object.keys(productImages).forEach(product => {
+            productImages[product].classList.add("AK-hidden-product");
         });
+        productImages[selectedProduct].classList.remove("AK-hidden-product");
+    };
 
-        // Set new image based on selected product
-        const selectedImage = document.getElementById(`${selectedProduct}-image`);
-        if (selectedImage) {
-            selectedImage.classList.add("active-product");
+    // Function to apply customization to the text preview
+    const updateTextPreview = () => {
+        const customText = customTextInput.value;
+        const color = colorSelect.value;
+        const font = fontSelect.value;
+        const fontSize = fontSizeInput.value;
+        const positionX = textPositionXInput.value;
+        const positionY = textPositionYInput.value;
+
+        // Apply styles to the custom text preview
+        customTextPreview.textContent = customText;
+        customTextPreview.style.color = color;
+        customTextPreview.style.fontFamily = font;
+        customTextPreview.style.fontSize = `${fontSize}px`;
+        customTextPreview.style.left = `${positionX}px`;
+        customTextPreview.style.top = `${positionY}px`;
+
+        // Apply effects if selected
+        if (textGradient.checked) {
+            customTextPreview.style.background = "linear-gradient(to right, #ff7e5f, #feb47b)";
+            customTextPreview.style.webkitBackgroundClip = "text";
+            customTextPreview.style.color = "transparent";
+        } else {
+            customTextPreview.style.background = "none";
+            customTextPreview.style.color = color;
         }
+
+        if (textGlow.checked) {
+            customTextPreview.style.textShadow = "0 0 10px rgba(255, 255, 255, 0.7)";
+        } else {
+            customTextPreview.style.textShadow = "none";
+        }
+
+        if (textMirror.checked) {
+            customTextPreview.style.transform = "scaleY(-1)";
+        } else {
+            customTextPreview.style.transform = "none";
+        }
+    };
+
+    // Apply changes when button is clicked
+    applyChangesBtn.addEventListener("click", () => {
+        updateProductPreview();
+        updateTextPreview();
+        successModal.style.display = "flex";
     });
 
-    // Handle image upload
-    uploadImageAK.addEventListener("change", (event) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-            const uploadedImage = new Image();
-            uploadedImage.src = reader.result;
-            document.getElementById("product-image").src = uploadedImage.src;
-        };
-        reader.readAsDataURL(event.target.files[0]);
+    // Close modal when "OK" button is clicked
+    closeModalBtn.addEventListener("click", () => {
+        successModal.style.display = "none";
     });
 
-    // Apply changes and show success modal
-    document.getElementById("apply-changes").addEventListener("click", () => {
-        applyTextChangesAK();
-        showModalAK();
-    });
+    // Listen for changes on form fields to update the preview
+    productSelect.addEventListener("change", updateProductPreview);
+    colorSelect.addEventListener("input", updateTextPreview);
+    customTextInput.addEventListener("input", updateTextPreview);
+    fontSelect.addEventListener("change", updateTextPreview);
+    fontSizeInput.addEventListener("input", updateTextPreview);
+    textPositionXInput.addEventListener("input", updateTextPreview);
+    textPositionYInput.addEventListener("input", updateTextPreview);
+    textGradient.addEventListener("change", updateTextPreview);
+    textGlow.addEventListener("change", updateTextPreview);
+    textMirror.addEventListener("change", updateTextPreview);
 
-    // Close modal
-    closeModalAK.addEventListener("click", closeModalHandlerAK);
-
-    // Download the customized product as an image
-    document.getElementById("download-design").addEventListener("click", () => {
-        const canvas = document.createElement("canvas");
-        const ctx = canvas.getContext("2d");
-
-        // Ensure canvas size matches the product image
-        const productImage = document.querySelector(".active-product");
-        canvas.width = productImage.width;
-        canvas.height = productImage.height;
-        ctx.drawImage(productImage, 0, 0, canvas.width, canvas.height);
-
-        // Draw text on canvas
-        const textPositionAK = {
-            x: parseInt(textPositionXAK.value),
-            y: parseInt(textPositionYAK.value),
-        };
-        ctx.font = `${fontSizeAK.value}px ${fontSelectAK.value}`;
-        ctx.fillStyle = colorSelectAK.value;
-        ctx.textAlign = "center";
-        ctx.fillText(customTextAK.value, textPositionAK.x, textPositionAK.y);
-
-        // Create download link for the image
-        const link = document.createElement("a");
-        link.download = "customized-product.png";
-        link.href = canvas.toDataURL();
-        link.click();
-    });
-
-    // Apply text changes immediately when any change happens
-    customTextAK.addEventListener("input", applyTextChangesAK);
-    fontSelectAK.addEventListener("change", applyTextChangesAK);
-    fontSizeAK.addEventListener("input", applyTextChangesAK);
-    colorSelectAK.addEventListener("input", applyTextChangesAK);
-    textGradientAK.addEventListener("change", applyTextChangesAK);
-    textGlowAK.addEventListener("change", applyTextChangesAK);
-    textMirrorAK.addEventListener("change", applyTextChangesAK);
-    textPositionXAK.addEventListener("input", applyTextChangesAK);
-    textPositionYAK.addEventListener("input", applyTextChangesAK);
+    // Initialize the preview on page load
+    updateProductPreview();
+    updateTextPreview();
 });

@@ -15,7 +15,7 @@ body {
     margin: 0;
 }
 
-.container-AK {
+.AK-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@ body {
     height: 100%;
 }
 
-.message-box-AK {
+.AK-message-box {
     text-align: center;
     background-color: #fff;
     padding: 40px;
@@ -43,13 +43,13 @@ p {
     margin-bottom: 20px;
 }
 
-.emoji-AK {
+.AK-emoji {
     font-size: 60px;
     color: #ff9800;
     margin-bottom: 20px;
 }
 
-.back-button-AK {
+.AK-back-button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -58,15 +58,16 @@ p {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    text-decoration: none;
 }
 
-.back-button-AK:hover {
+.AK-back-button:hover {
     background-color: #0056b3;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .message-box-AK {
+    .AK-message-box {
         padding: 30px;
     }
 
@@ -78,13 +79,13 @@ p {
         font-size: 16px;
     }
 
-    .emoji-AK {
+    .AK-emoji {
         font-size: 50px;
     }
 }
 
 @media (max-width: 480px) {
-    .message-box-AK {
+    .AK-message-box {
         padding: 20px;
     }
 
@@ -96,7 +97,7 @@ p {
         font-size: 14px;
     }
 
-    .emoji-AK {
+    .AK-emoji {
         font-size: 40px;
     }
 }

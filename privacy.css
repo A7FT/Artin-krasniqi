@@ -1,4 +1,4 @@
-/* A.K. - Pjesa e fillimit e kodit - Stili për body dhe html */
+/* AK - Pjesa e fillimit e kodit - Stili për body dhe html */
 html, body {
   width: 100%;
   height: 100%;
@@ -6,14 +6,14 @@ html, body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient-AK 15s ease infinite;
+  animation: AK-gradient 15s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-color-AK);
+  color: var(--AK-text-color);
 }
 
-@keyframes gradient-AK {
+@keyframes AK-gradient {
   0% {
       background-position: 0% 50%;
   }
@@ -25,21 +25,21 @@ html, body {
   }
 }
 
-/* A.K. - Animacion për tekstin në ekranin kryesor */
-.main-AK {
+/* AK - Animacion për tekstin në ekranin kryesor */
+.AK-main {
   text-align: center;
   position: relative;
   opacity: 0;
-  animation: fadeIn-AK 5s ease-in-out forwards;
+  animation: AK-fadeIn 5s ease-in-out forwards;
 }
 
-@keyframes fadeIn-AK {
+@keyframes AK-fadeIn {
   100% {
       opacity: 1;
   }
 }
 
-h2-AK {
+.AK-h2 {
   font-size: 100px;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -48,18 +48,18 @@ h2-AK {
   left: 50%;
 }
 
-.first-AK {
+.AK-first {
   color: transparent;
   -webkit-text-stroke: 2px #040e12ea;
 }
 
-.second-AK {
+.AK-second {
   color: #01070ae4;
   -webkit-text-stroke: 2px #040d11e7;
-  animation: waves-AK 5s ease-in-out infinite;
+  animation: AK-waves 5s ease-in-out infinite;
 }
 
-@keyframes waves-AK {
+@keyframes AK-waves {
   0%, 100% {
       clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
   }
@@ -68,18 +68,18 @@ h2-AK {
   }
 }
 
-/* A.K. - Ngjyrat dhe variablat */
+/* AK - Ngjyrat dhe variablat */
 :root {
-  --primary-color-AK: #4CAF50;
-  --hover-color-AK: #45a049;
-  --background-color-AK: #f4f4f4;
-  --card-background-AK: #e0e0e0;
-  --card-hover-color-AK: #000000;
-  --text-color-AK: #333;
-  --button-fill-color-AK: #f1f1f1;
+  --AK-primary-color: #4CAF50;
+  --AK-hover-color: #45a049;
+  --AK-background-color: #f4f4f4;
+  --AK-card-background: #e0e0e0;
+  --AK-card-hover-color: #000000;
+  --AK-text-color: #333;
+  --AK-button-fill-color: #f1f1f1;
 }
 
-/* A.K. - Stili i përgjithshëm */
+/* AK - Stili i përgjithshëm */
 * {
   margin: 0;
   padding: 0;
@@ -92,12 +92,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--background-color-AK);
-  color: var(--text-color-AK);
+  background-color: var(--AK-background-color);
+  color: var(--AK-text-color);
 }
 
-/* A.K. - Kontejneri i politikës së privatësisë */
-.privacy-policy-container-AK {
+/* AK - Kontejneri i politikës së privatësisë */
+.AK-privacy-policy-container {
   width: 90%;
   max-width: 900px;
   padding: 20px;
@@ -109,14 +109,14 @@ body {
   overflow: hidden;
 }
 
-.header-AK {
+.AK-header {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
 }
 
-.privacy-policy-box-AK {
-  background-color: var(--card-background-AK);
+.AK-privacy-policy-box {
+  background-color: var(--AK-card-background);
   padding: 20px;
   border-radius: 5px;
   max-height: 60vh;
@@ -125,14 +125,14 @@ body {
   margin-bottom: 20px;
 }
 
-.privacy-policy-box-AK:hover {
+.AK-privacy-policy-box:hover {
   transform: scale(1.05);
-  background-color: var(--card-hover-color-AK);
+  background-color: var(--AK-card-hover-color);
   color: white;
 }
 
-/* A.K. - Stili për butonin */
-.Accept-AK {
+/* AK - Stili për butonin */
+.AK-Accept {
   position: relative;
   top: auto;
   left: auto;
@@ -153,20 +153,20 @@ body {
   transition: all 0.3s ease;
 }
 
-/* A.K. - Efekti për klikim */
-.Accept-AK:active {
+/* AK - Efekti për klikim */
+.AK-Accept:active {
   transform: scale(0.95);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   background-color: #333;
 }
 
-/* A.K. - Efekti i kalimit kur kalohet mbi buton */
-.Accept-AK:hover {
+/* AK - Efekti i kalimit kur kalohet mbi buton */
+.AK-Accept:hover {
   background-color: #444;
 }
 
-/* A.K. - Efektet për rrethimin e butonit */
-.Accept-AK::before {
+/* AK - Efektet për rrethimin e butonit */
+.AK-Accept::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -176,18 +176,18 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.Accept-AK span:nth-child(1) {
+.AK-Accept span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 2px;
   background: linear-gradient(to right, #0c002b, #1779ff);
-  animation: animate1-AK 2s linear infinite;
+  animation: AK-animate1 2s linear infinite;
   animation-delay: 1s;
 }
 
-@keyframes animate1-AK {
+@keyframes AK-animate1 {
   0% {
       transform: translateX(-100%);
   }
@@ -196,18 +196,18 @@ body {
   }
 }
 
-.Accept-AK span:nth-child(2) {
+.AK-Accept span:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
   width: 2px;
   height: 100%;
   background: linear-gradient(to bottom, #0c002b, #1779ff);
-  animation: animate2-AK 2s linear infinite;
+  animation: AK-animate2 2s linear infinite;
   animation-delay: 2s;
 }
 
-@keyframes animate2-AK {
+@keyframes AK-animate2 {
   0% {
       transform: translateY(-100%);
   }
@@ -216,18 +216,18 @@ body {
   }
 }
 
-.Accept-AK span:nth-child(3) {
+.AK-Accept span:nth-child(3) {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
   background: linear-gradient(to left, #0c002b, #1779ff);
-  animation: animate3-AK 2s linear infinite;
+  animation: AK-animate3 2s linear infinite;
   animation-delay: 1s;
 }
 
-@keyframes animate3-AK {
+@keyframes AK-animate3 {
   0% {
       transform: translateX(100%);
   }
@@ -236,18 +236,18 @@ body {
   }
 }
 
-.Accept-AK span:nth-child(4) {
+.AK-Accept span:nth-child(4) {
   position: absolute;
   top: 0;
   left: 0;
   width: 2px;
   height: 100%;
   background: linear-gradient(to top, #0c002b, #1779ff);
-  animation: animate4-AK 2s linear infinite;
+  animation: AK-animate4 2s linear infinite;
   animation-delay: 2s;
 }
 
-@keyframes animate4-AK {
+@keyframes AK-animate4 {
   0% {
       transform: translateY(100%);
   }
@@ -256,7 +256,7 @@ body {
   }
 }
 
-.button-container-AK {
+.AK-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,18 +264,18 @@ body {
   margin-top: 20px;
 }
 
-/* A.K. - Rreshtim për ekranet e vogla */
+/* AK - Rreshtim për ekranet e vogla */
 @media (max-width: 768px) {
-  .privacy-policy-container-AK {
+  .AK-privacy-policy-container {
       padding: 10px;
   }
 
-  .privacy-policy-box-AK {
+  .AK-privacy-policy-box {
       max-height: 50vh;
       font-size: 14px;
   }
 
-  .Accept-AK {
+  .AK-Accept {
       font-size: 14px;
       padding: 10px 20px;
   }
